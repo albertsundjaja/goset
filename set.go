@@ -4,8 +4,12 @@ import "fmt"
 
 type Set[T comparable] map[T]struct{}
 
-func New[T comparable]() Set[T] {
-	return make(map[T]struct{})
+func New[T comparable](elems ...T) Set[T] {
+	newSet := make(Set[T], len(elems))
+	for _, elem := range elems {
+		newSet.Add(elem)
+	}
+	return newSet
 }
 
 func (s Set[T]) Add(elem T) {
