@@ -3,7 +3,7 @@ package goset_test
 import (
 	"testing"
 
-	goset "github.com/albertsundjaja/go-set"
+	goset "github.com/albertsundjaja/goset"
 )
 
 func TestSet(t *testing.T) {
